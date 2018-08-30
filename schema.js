@@ -124,6 +124,12 @@ const Query = new GraphQLObjectType({
           },
           sport: {
             type: GraphQLString
+          },
+          team: {
+            type: GraphQLString
+          },
+          medal: {
+            type: GraphQLString
           }
         },
         resolve(root, args) {
@@ -132,7 +138,7 @@ const Query = new GraphQLObjectType({
       }
     }
   }
-})
+});
 
 const Schema = new GraphQLSchema({
   query: Query
